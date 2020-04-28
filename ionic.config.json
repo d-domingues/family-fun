@@ -1,0 +1,7 @@
+{
+  "name": "family-fun",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
