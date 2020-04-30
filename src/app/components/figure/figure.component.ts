@@ -3,7 +3,7 @@ import { Figure } from 'src/app/models/figure'
 import { PlayerService } from 'src/app/services/player.service'
 
 @Component({
-	selector: 'carol-figure',
+	selector: 'fun-figure',
 	templateUrl: './figure.component.html',
 	styleUrls: ['./figure.component.scss']
 })

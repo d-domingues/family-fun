@@ -1,7 +1,9 @@
 import { Component } from '@angular/core'
 import { ToastController } from '@ionic/angular'
-import { PlayerService } from '@service/player.service'
-import { Figure, FigureServiceService } from 'src/app/carol/figure/figure.service'
+import { FigureService } from 'src/app/components/figure/figure.service'
+import { Figure } from 'src/app/models/figure'
+import { PlayerService } from 'src/app/services/player.service'
+
 
 @Component({
 	selector: 'app-figure-games',
@@ -14,7 +16,7 @@ export class FigureGamesPage {
 	options: Figure[]
 
 	constructor(
-		private figService: FigureServiceService,
+		private figService: FigureService,
 		private player: PlayerService,
 		private toastController: ToastController
 	) {

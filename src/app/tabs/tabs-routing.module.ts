@@ -1,6 +1,7 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { TabsPage } from './tabs.page';
+import { NgModule } from '@angular/core'
+import { RouterModule, Routes } from '@angular/router'
+
+import { TabsPage } from './tabs.page'
 
 const routes: Routes = [
   {
@@ -9,15 +10,15 @@ const routes: Routes = [
     children: [
       {
         path: 'tab1',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+        loadChildren: () => import('../gallery/gallery.module').then(m => m.GalleryModule)
       },
       {
         path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        loadChildren: () => import('../games/games.module').then(m => m.GamesPageModule)
       },
       {
         path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        loadChildren: () => import('../match-pairs/match-pairs.module').then(m => m.MatchPairsPageModule)
       },
       {
         path: '',

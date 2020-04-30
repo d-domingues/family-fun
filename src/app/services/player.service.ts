@@ -28,7 +28,9 @@ export class PlayerService {
 			onend: () => {
 				console.log('end')
 				this.isPlaying = false
-				calbackFn()
+				if (calbackFn) {
+					calbackFn()
+				}
 			}
 		})
 

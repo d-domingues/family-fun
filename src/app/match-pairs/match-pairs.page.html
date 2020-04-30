@@ -1,0 +1,81 @@
+<ion-header [translucent]="true">
+	<ion-toolbar>
+		<ion-title>
+			Encontra os Pares
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+	<ion-grid no-padding>
+		<ion-row>
+			<ion-col size="6" *ngFor="let figure of figures">
+				<ion-card>
+					<ion-img [src]="figures[0].src"></ion-img>
+				</ion-card>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>
+
+<!-- 	<fun-figure
+		[@cardAnimator]="animationState"
+		(@cardAnimator.done)="resetAnimationState()"
+		(swipeleft)="startAnimation('slideOutLeft')"
+		(swiperight)="startAnimation('zoomOutRight')"
+		(swipeup)="startAnimation('rotateOutUpRight')"
+		(swipedown)="startAnimation('flipOutY')"
+		[figure]="figures[0]"
+	></fun-figure>
+ -->
+<!-- 	<ion-card
+		[@cardAnimator]="animationState"
+		(@cardAnimator.done)="resetAnimationState()"
+		(swipeleft)="startAnimation('slideOutLeft')"
+		(swiperight)="startAnimation('zoomOutRight')"
+		(swipeup)="startAnimation('rotateOutUpRight')"
+		(swipedown)="startAnimation('flipOutY')"
+	>
+		<ion-img [src]="figures[0].src"></ion-img>
+	</ion-card>
+
+	<ion-button color="primary" (tap)="startAnimation('wobble')">
+		WOBBLE
+	</ion-button>
+	<ion-button color="primary" (tap)="startAnimation('swing')">
+		SWING
+	</ion-button>
+	<ion-button color="primary" (tap)="startAnimation('jello')">
+		JELLO
+	</ion-button>
+	<ion-button color="primary" (tap)="startAnimation('rotateOutUpRight')">
+		rotateOutUpRight
+	</ion-button>
+	<ion-button color="primary" (tap)="startAnimation('flipOutY')">
+		flipOutY
+	</ion-button>
+	<ion-button color="primary" (tap)="startAnimation('jello')">
+		JELLO
+	</ion-button> -->
+
+<!-- 			<div class="flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<span>Encontra o meu par</span>
+						</div>
+						<div class="flip-card-back">
+							<fun-figure [figure]="figure"></fun-figure>
+						</div>
+					</div>
+				</div> -->
+
+<!-- 				<ion-card
+					[@cardAnimator]="animationState"
+					(@cardAnimator.done)="resetAnimationState()"
+					(swipeleft)="startAnimation('slideOutLeft')"
+					(swiperight)="startAnimation('zoomOutRight')"
+					(swipeup)="startAnimation('rotateOutUpRight')"
+					(swipedown)="startAnimation('flipOutY')"
+				>
+					<ion-img [src]="figures[0].src"></ion-img>
+				</ion-card> -->
