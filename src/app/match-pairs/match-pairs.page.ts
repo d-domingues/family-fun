@@ -4,7 +4,7 @@ import { FigureService } from '../components/figure/figure.service'
 
 @Component({
 	templateUrl: 'match-pairs.page.html',
-	styleUrls: ['match-pairs.page.scss'],
+	styleUrls: ['match-pairs.page.scss']
 	/* animations: [
 		trigger('cardAnimator', [
 			transition('* => wobble', animate(1000, keyframes(kf.wobble))),

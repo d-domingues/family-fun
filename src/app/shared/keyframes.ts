@@ -1,26 +1,27 @@
-/* import { style } from '@angular/animationexport const wobble = ['
+import { animate, keyframes, state, style, transition, trigger } from '@angular/animations'
 
+export const wobble = [
 	style({
-		transform: 'translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg)',
-		offset: 0.15
+		offset: 0.15,
+		transform: 'translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg)'
 	}),
 	style({
-		transform: 'translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg)',
-		offset: 0.3
+		offset: 0.3,
+		transform: 'translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg)'
 	}),
 	style({
-		transform: 'translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg)',
-		offset: 0.45
+		offset: 0.45,
+		transform: 'translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg)'
 	}),
 	style({
-		transform: 'translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg)',
-		offset: 0.6
+		offset: 0.6,
+		transform: 'translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg)'
 	}),
 	style({
-		transform: 'translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg)',
-		offset: 0.75
+		offset: 0.75,
+		transform: 'translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg)'
 	}),
-	style({ transform: 'none', offset: 1 })
+	style({ offset: 1, transform: 'none' })
 ]
 
 export const jello = [
@@ -47,48 +48,111 @@ export const swing = [
 ]
 
 export const slideOutLeft = [
-	style({ transform: 'translate3d(0, 0, 0)', offset: 0 }),
-	style({ transform: 'translate3d(-150%, 0, 0)', opacity: 0, offset: 1 })
+	style({ offset: 0, transform: 'translate3d(0, 0, 0)' }),
+	style({ offset: 1, transform: 'translate3d(-150%, 0, 0)', opacity: 0 })
 ]
 
 export const zoomOutRight = [
 	style({
-		transform: 'scale3d(.475, .475, .475) translate3d(-42px, 0, 0)',
-		offset: 0.4
+		offset: 0.4,
+		transform: 'scale3d(.475, .475, .475) translate3d(-42px, 0, 0)'
 	}),
 	style({
+		offset: 1,
 		transform: 'scale(.1) translate3d(2000px, 0, 0)',
-		'transform-origin': 'right center',
-		offset: 1
+		'transform-origin': 'right center'
 	})
 ]
 
 export const rotateOutUpRight = [
 	style({
+		offset: 0,
 		transform: 'rotate3d(0, 0, 0, 0deg)',
 		opacity: 1,
-		'transform-origin': 'right bottom',
-		offset: 0
+		'transform-origin': 'right bottom'
 	}),
 	style({
+		offset: 1,
 		transform: 'rotate3d(0, 0, 1, 90deg)',
 		opacity: 0,
-		'transform-origin': 'right bottom',
-		offset: 1
+		'transform-origin': 'right bottom'
 	})
 ]
 
 export const flipOutY = [
-	style({ transform: 'perspective(400px)', offset: 0 }),
+	style({ offset: 0, transform: 'perspective(400px)' }),
 	style({
+		offset: 0.33,
 		transform: 'perspective(400px) rotate3d(0, 1, 0, -15deg)',
-		opacity: 1,
-		offset: 0.33
+		opacity: 1
 	}),
 	style({
+		offset: 1,
 		transform: 'perspective(400px) rotate3d(0, 1, 0, 90deg)',
-		opacity: 0,
+		opacity: 0
+	})
+]
+
+export const flipBack = [
+	style({
+		transform: 'perspective(400px) rotateY(0deg)',
+		offset: 0
+	}),
+	style({
+		transform: 'perspective(400px) scale3d(1.5, 1.5, 1.5) rotateY(80deg)',
+		offset: 0.4
+	}),
+	style({
+		transform: 'perspective(400px) scale3d(1.5, 1.5, 1.5) rotateY(100deg)',
+		offset: 0.5
+	}),
+	style({
+		transform: 'perspective(400px) scale3d(0.95, 0.95, 0.95) rotateY(180deg)',
+		offset: 0.8
+	}),
+	style({
+		transform: 'perspective(400px) scale3d(1, 1, 1) rotateY(180deg)',
 		offset: 1
 	})
 ]
- */
+
+export const flipFront = [
+	style({
+		transform: 'perspective(400px) rotateY(0deg)',
+		offset: 0
+	}),
+	style({
+		transform: 'perspective(400px) scale3d(1.5, 1.5, 1.5) rotateY(-80deg)',
+		offset: 0.4
+	}),
+	style({
+		transform: 'perspective(400px) scale3d(1.5, 1.5, 1.5) rotateY(-100deg)',
+		offset: 0.5
+	}),
+	style({
+		transform: 'perspective(400px) scale3d(0.95, 0.95, 0.95) rotateY(-180deg)',
+		offset: 0.8
+	}),
+	style({
+		transform: 'perspective(400px) scale3d(1, 1, 1) rotateY(-180deg)',
+		offset: 1
+	})
+]
+
+// TRIGGERS
+export const flipTrigger = trigger('flip', [
+	state(
+		'front',
+		style({
+			transform: 'rotateY(0deg)'
+		})
+	),
+	state(
+		'back',
+		style({
+			transform: 'rotateY(180deg)'
+		})
+	),
+	transition('front => back', [animate('1s 0s ease-out', keyframes(flipBack))]),
+	transition('back => front', [animate('1s 0s ease-in', keyframes(flipFront))])
+])

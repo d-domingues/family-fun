@@ -1,4 +1,19 @@
-<!-- <ion-card [@cardAnimator]="flip ? 'jello' : ''"> -->
-<ion-card>
-	<ion-img [src]="figure" (click)="toggle()"></ion-img>
-</ion-card>
+<!-- <ion-card
+	[@flip]="animationState"
+	(@flip.done)="resetAnimationState()"
+	(click)="onFlipClick()"
+	(swipeleft)="startAnimation('slideOutLeft')"
+>
+	<ion-img [src]="figure"></ion-img>
+</ion-card> -->
+
+<div (click)="onFlipClick()" class="flip-card">
+	<div [@flip]="flipState" class="flip-card-inner">
+		<div class="flip-card-front">
+			FRONT
+		</div>
+		<div class="flip-card-back">
+			BACK
+		</div>
+	</div>
+</div>

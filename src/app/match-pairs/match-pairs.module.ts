@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router'
 import { IonicModule } from '@ionic/angular'
 
 import { FigureModule } from '../components/figure/figure.module'
+import { FlippingFigComponent } from './flipping-fig/flipping-fig.component'
 import { MatchPairsPage } from './match-pairs.page'
 
 @NgModule({
@@ -13,6 +14,6 @@ import { MatchPairsPage } from './match-pairs.page'
 		FigureModule,
 		RouterModule.forChild([{ path: '', component: MatchPairsPage }])
 	],
-	declarations: [MatchPairsPage]
+	declarations: [MatchPairsPage, FlippingFigComponent]
 })
 export class MatchPairsPageModule {}

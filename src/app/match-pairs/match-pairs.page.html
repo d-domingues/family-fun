@@ -10,9 +10,7 @@
 	<ion-grid no-padding>
 		<ion-row>
 			<ion-col size="6" *ngFor="let figure of figures">
-				<ion-card>
-					<ion-img [src]="figures[0].src"></ion-img>
-				</ion-card>
+				<app-flipping-fig [figure]="figures[0].src"></app-flipping-fig>
 			</ion-col>
 		</ion-row>
 	</ion-grid>
