@@ -1,19 +1,10 @@
-<!-- <ion-card
-	[@flip]="animationState"
-	(@flip.done)="resetAnimationState()"
-	(click)="onFlipClick()"
-	(swipeleft)="startAnimation('slideOutLeft')"
->
-	<ion-img [src]="figure"></ion-img>
-</ion-card> -->
-
-<div (click)="onFlipClick()" class="flip-card">
-	<div [@flip]="flipState" class="flip-card-inner">
-		<div class="flip-card-front">
-			FRONT
+<div class="prod-image-wrapper" (click)="toggleFlip()">
+	<div class="prod-image-box" [@flipState]="flip">
+		<div class="prod-image-box__side prod-image-box__front">
+			<img src="../../../assets/img/card_back.png" />
 		</div>
-		<div class="flip-card-back">
-			BACK
+		<div class="prod-image-box__side prod-image-box__back">
+			<ion-img [src]="figure"></ion-img>
 		</div>
 	</div>
 </div>
