@@ -1,6 +1,5 @@
-import { style } from '@angular/animations'
+/* import { style } from '@angular/animationexport const wobble = ['
 
-export const wobble = [
 	style({
 		transform: 'translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg)',
 		offset: 0.15
@@ -92,3 +91,4 @@ export const flipOutY = [
 		offset: 1
 	})
 ]
+ */
