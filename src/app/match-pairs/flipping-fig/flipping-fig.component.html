@@ -1,5 +1,5 @@
-<div class="prod-image-wrapper" (click)="toggleFlip()">
-	<div class="prod-image-box" [@flipState]="flip">
+<div class="prod-image-wrapper">
+	<div class="prod-image-box" [@flipState]="flip" (click)="toggleFlip()">
 		<div class="prod-image-box__side prod-image-box__front">
 			<img src="../../../assets/img/card_back.png" />
 		</div>

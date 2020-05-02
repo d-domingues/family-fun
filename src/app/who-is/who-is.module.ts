@@ -1,20 +1,18 @@
 import { CommonModule } from '@angular/common'
 import { NgModule } from '@angular/core'
-import { FormsModule } from '@angular/forms'
 import { IonicModule } from '@ionic/angular'
 
-import { ExploreContainerComponentModule } from '../explore-container/explore-container.module'
-import { GamesPageRoutingModule } from './games-routing.module'
-import { GamesPage } from './games.page'
+import { FigureModule } from '../components/figure/figure.module'
+import { WhoIsPageRoutingModule } from './who-is-routing.module'
+import { WhoIsPage } from './who-is.page'
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
-    FormsModule,
-    ExploreContainerComponentModule,
-    GamesPageRoutingModule
+    WhoIsPageRoutingModule,
+    FigureModule
   ],
-  declarations: [GamesPage]
+  declarations: [WhoIsPage]
 })
-export class GamesPageModule {}
+export class WhoIsModule {}

@@ -16,4 +16,4 @@ import { MatchPairsPage } from './match-pairs.page'
 	],
 	declarations: [MatchPairsPage, FlippingFigComponent]
 })
-export class MatchPairsPageModule {}
+export class MatchPairsModule {}

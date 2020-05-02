@@ -14,11 +14,11 @@ const routes: Routes = [
       },
       {
         path: 'tab2',
-        loadChildren: () => import('../games/games.module').then(m => m.GamesPageModule)
+        loadChildren: () => import('../who-is/who-is.module').then(m => m.WhoIsModule)
       },
       {
         path: 'tab3',
-        loadChildren: () => import('../match-pairs/match-pairs.module').then(m => m.MatchPairsPageModule)
+        loadChildren: () => import('../match-pairs/match-pairs.module').then(m => m.MatchPairsModule)
       },
       {
         path: '',

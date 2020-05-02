@@ -15,7 +15,7 @@ export class PlayerService {
 
 	play(soundSrc: string, calbackFn?: () => void) {
 		if (this.isPlaying) {
-			this.player.stop()
+			return
 		}
 
 		this.player = new Howl({
