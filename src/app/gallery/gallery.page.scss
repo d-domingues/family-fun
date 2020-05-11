@@ -4,5 +4,9 @@ ion-title {
 }
 
 ion-content {
-	--background: url('../../assets/wallpapers/sweets_small.png') mistyrose;
+	--background: url('/assets/wallpapers/sweets_small.png') mistyrose;
+}
+
+#foto-card:hover {
+	transform: scale(1.1);
 }

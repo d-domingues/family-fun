@@ -1,0 +1,50 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>advanced-page</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="advanced-area">
+		<aside class="side-area">
+			<form>
+				<input
+					#criteria
+					(input)="updateCriteria(criteria.value)"
+					placeholder="filter results"
+				/>
+			</form>
+			<ol class="menu">
+				<li
+					[class.selected]="isActive(sections.one)"
+					(click)="updateSection(sections.one)"
+				>
+					Gallery One
+				</li>
+				<li
+					[class.selected]="isActive(sections.two)"
+					(click)="updateSection(sections.two)"
+				>
+					Gallery Two
+				</li>
+				<li
+					[class.selected]="isActive(sections.three)"
+					(click)="updateSection(sections.three)"
+				>
+					Gallery Three
+				</li>
+			</ol>
+		</aside>
+
+		<section
+			class="gallery gallery-area"
+			[@listAnimation]="section"
+			[@filterAnimation]="filterTotal"
+		>
+			<li *ngFor="let photo of getPhotos()" class="photo-record">
+				<img *ngIf="photo.src" [src]="photo.src" />
+				<span *ngIf="!photo.src">{{ photo.title }}</span>
+			</li>
+		</section>
+	</div>
+</ion-content>

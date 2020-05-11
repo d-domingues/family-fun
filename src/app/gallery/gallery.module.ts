@@ -4,12 +4,13 @@ import { IonicModule } from '@ionic/angular'
 
 import { FigureComponent } from '../components/figure/figure.component'
 import { FigureModule } from '../components/figure/figure.module'
+import { GalleryPicComponent } from './gallery-pic/gallery-pic.component'
 import { GalleryRoutingModule } from './gallery-routing.module'
 import { GalleryPage } from './gallery.page'
 
 @NgModule({
 	imports: [CommonModule, IonicModule, FigureModule, GalleryRoutingModule],
 	exports: [FigureComponent],
-	declarations: [GalleryPage]
+	declarations: [GalleryPage, GalleryPicComponent]
 })
 export class GalleryModule {}

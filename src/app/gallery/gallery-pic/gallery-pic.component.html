@@ -1,0 +1,8 @@
+<ion-card id="foto-card" button (click)="play()" [@zoom]="animState" (click)="changeAnimState()">
+	<ion-img [src]="figure.src"></ion-img>
+	<ion-card-header>
+		<ion-card-title class="ion-text-center">
+			{{ text }}
+		</ion-card-title>
+	</ion-card-header>
+</ion-card>
