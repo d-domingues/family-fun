@@ -1,8 +1,8 @@
 import { Component } from '@angular/core'
 import { ToastController } from '@ionic/angular'
 
-import { FigureService } from '../components/figure/figure.service'
 import { Figure } from '../models/figure'
+import { FigureService } from '../services/figure.service'
 import { PlayerService } from '../services/player.service'
 
 @Component({
@@ -19,7 +19,7 @@ export class WhoIsPage {
 		private player: PlayerService,
 		private toastController: ToastController
 	) {
-		this.figures = this.figService.getShuffleFigures()
+		this.figures = this.figService.getShuffledFigures()
 		this.currentIdx = 0
 		this.setOptions()
 	}
@@ -43,7 +43,7 @@ export class WhoIsPage {
 	setOptions() {
 		const correctOpt = this.figures[this.currentIdx]
 		const incorrectOpt = this.figService
-			.getShuffleFigures()
+			.getShuffledFigures()
 			.filter(f => f.id !== this.figures[this.currentIdx].id)[0]
 
 		this.options = [correctOpt, incorrectOpt].sort(() => Math.random() - 0.5)

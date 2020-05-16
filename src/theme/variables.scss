@@ -74,6 +74,78 @@
 	--ion-color-light-contrast-rgb: 0, 0, 0;
 	--ion-color-light-shade: #d7d8da;
 	--ion-color-light-tint: #f5f6f9;
+
+	/** brown */
+	--ion-color-brown: #bc8f8f;
+	--ion-color-brown-rgb: 188, 143, 143;
+	--ion-color-brown-contrast: #4e2121;
+	--ion-color-brown-contrast-rgb: 78, 33, 33;
+	--ion-color-brown-shade: #a57e7e;
+	--ion-color-brown-tint: #c39a9a;
+
+	/** pink */
+	--ion-color-pink: #ffc0cb;
+	--ion-color-pink-rgb: 255, 192, 203;
+	--ion-color-pink-contrast: #000000;
+	--ion-color-pink-contrast-rgb: 0, 0, 0;
+	--ion-color-pink-shade: #e0a9b3;
+	--ion-color-pink-tint: #ffc6d0;
+
+	/** blue */
+	--ion-color-blue: #00bfff;
+	--ion-color-blue-rgb: 0, 191, 255;
+	--ion-color-blue-contrast: #000000;
+	--ion-color-blue-contrast-rgb: 0, 0, 0;
+	--ion-color-blue-shade: #00a8e0;
+	--ion-color-blue-tint: #1ac5ff;
+
+	/** yellow */
+	--ion-color-yellow: #ffefd5;
+	--ion-color-yellow-rgb: 255, 239, 213;
+	--ion-color-yellow-contrast: #000000;
+	--ion-color-yellow-contrast-rgb: 0, 0, 0;
+	--ion-color-yellow-shade: #e0d2bb;
+	--ion-color-yellow-tint: #fff1d9;
+
+	/** red */
+	--ion-color-red: #dc143c;
+	--ion-color-red-rgb: 220, 20, 60;
+	--ion-color-red-contrast: #ffffff;
+	--ion-color-red-contrast-rgb: 255, 255, 255;
+	--ion-color-red-shade: #c21235;
+	--ion-color-red-tint: #e02c50;
+
+	/** orange */
+	--ion-color-orange: #ff7f50;
+	--ion-color-orange-rgb: 255, 127, 80;
+	--ion-color-orange-contrast: #000000;
+	--ion-color-orange-contrast-rgb: 0, 0, 0;
+	--ion-color-orange-shade: #e07046;
+	--ion-color-orange-tint: #ff8c62;
+
+	/** purple */
+	--ion-color-purple: #ff00ff;
+	--ion-color-purple-rgb: 255, 0, 255;
+	--ion-color-purple-contrast: #ffffff;
+	--ion-color-purple-contrast-rgb: 255, 255, 255;
+	--ion-color-purple-shade: #e000e0;
+	--ion-color-purple-tint: #ff1aff;
+
+	/** green */
+	--ion-color-green: #228b22;
+	--ion-color-green-rgb: 34, 139, 34;
+	--ion-color-green-contrast: #ffffff;
+	--ion-color-green-contrast-rgb: 255, 255, 255;
+	--ion-color-green-shade: #1e7a1e;
+	--ion-color-green-tint: #389738;
+
+	/** grey */
+	--ion-color-grey: #778899;
+	--ion-color-grey-rgb: 119, 136, 153;
+	--ion-color-grey-contrast: #000000;
+	--ion-color-grey-contrast-rgb: 0, 0, 0;
+	--ion-color-grey-shade: #697887;
+	--ion-color-grey-tint: #8594a3;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -224,21 +296,4 @@
 
 		--ion-tab-bar-background: #1f1f1f;
 	}
-}
-
-@font-face {
-	font-family: 'Sacramento';
-	src: url('../assets/fonts/Sacramento-Regular.ttf');
-}
-@font-face {
-	font-family: 'FrederickatheGreat';
-	src: url('../assets/fonts/FrederickatheGreat-Regular.ttf');
-}
-@font-face {
-	font-family: 'RougeScript';
-	src: url('../assets/fonts/RougeScript-Regular.ttf');
-}
-@font-face {
-	font-family: 'FascinateInline';
-	src: url('../assets/fonts/FascinateInline-Regular.ttf');
 }

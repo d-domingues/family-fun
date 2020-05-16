@@ -8,29 +8,29 @@ export const tabsRoutes: Routes = [
 		component: TabsPage,
 		children: [
 			{
-				path: 'tab1',
+				path: 'gallery',
 				loadChildren: () =>
 					import('../gallery/gallery.module').then(m => m.GalleryModule)
 			},
 			{
-				path: 'tab2',
+				path: 'who-is',
 				loadChildren: () => import('../who-is/who-is.module').then(m => m.WhoIsModule)
 			},
 			{
-				path: 'tab3',
+				path: 'match-pairs',
 				loadChildren: () =>
 					import('../match-pairs/match-pairs.module').then(m => m.MatchPairsModule)
 			},
 			{
 				path: '',
-				redirectTo: '/tabs/tab1',
+				redirectTo: '/tabs/gallery',
 				pathMatch: 'full'
 			}
 		]
 	},
 	{
 		path: '',
-		redirectTo: '/tabs/tab1',
+		redirectTo: '/tabs/gallery',
 		pathMatch: 'full'
 	}
 ]
