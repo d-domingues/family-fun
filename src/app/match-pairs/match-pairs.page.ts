@@ -7,7 +7,7 @@ import { FigureService } from '../services/figure.service'
 	styleUrls: ['match-pairs.page.scss']
 })
 export class MatchPairsPage {
-	figures = this.figService.getShuffledPairs()
+	figures = this.figService.getShuffledPairs().slice(0, 6)
 	animationState: string
 
 	constructor(private figService: FigureService) {}

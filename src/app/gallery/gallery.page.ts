@@ -27,4 +27,9 @@ export class GalleryPage {
 	constructor(private figService: FigureService) {
 		this.figures = this.figService.getFigures()
 	}
+
+	onClick() {
+		const el = document.getElementById('demo')
+		console.log(el)
+	}
 }

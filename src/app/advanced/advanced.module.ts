@@ -1,18 +1,23 @@
 import { CommonModule } from '@angular/common'
 import { NgModule } from '@angular/core'
-import { FormsModule } from '@angular/forms'
+import { RouterModule } from '@angular/router'
 import { IonicModule } from '@ionic/angular'
 
-import { AdvancedRoutingModule } from './advanced-routing.module'
-import { AdvancedPage } from './advanced.page'
+import { AdvancedPage, LeftNavDirective, StepOne, StepTwo, Wizard, WizardStep } from './advanced.page'
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    AdvancedRoutingModule
-  ],
-  declarations: [AdvancedPage]
+	imports: [
+		CommonModule,
+		IonicModule,
+		RouterModule.forChild([{ path: '', component: AdvancedPage }])
+	],
+	declarations: [
+		AdvancedPage,
+		Wizard,
+		WizardStep,
+		StepOne,
+		StepTwo,
+		LeftNavDirective
+	]
 })
 export class AdvancedModule {}

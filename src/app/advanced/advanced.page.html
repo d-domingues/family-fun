@@ -1,50 +1,26 @@
-<ion-header>
-	<ion-toolbar>
-		<ion-title>advanced-page</ion-title>
-	</ion-toolbar>
-</ion-header>
-
-<ion-content>
-	<div class="advanced-area">
-		<aside class="side-area">
-			<form>
-				<input
-					#criteria
-					(input)="updateCriteria(criteria.value)"
-					placeholder="filter results"
-				/>
-			</form>
-			<ol class="menu">
-				<li
-					[class.selected]="isActive(sections.one)"
-					(click)="updateSection(sections.one)"
-				>
-					Gallery One
-				</li>
-				<li
-					[class.selected]="isActive(sections.two)"
-					(click)="updateSection(sections.two)"
-				>
-					Gallery Two
-				</li>
-				<li
-					[class.selected]="isActive(sections.three)"
-					(click)="updateSection(sections.three)"
-				>
-					Gallery Three
-				</li>
-			</ol>
-		</aside>
-
-		<section
-			class="gallery gallery-area"
-			[@listAnimation]="section"
-			[@filterAnimation]="filterTotal"
+<!-- <div class="advanced-area">
+	<section class="gallery gallery-area" [@listAnimation]="photos.length">
+		<li
+			*ngFor="let photo of photos; index as i"
+			class="photo-record"
+			(click)="removeItem(i)"
+			(mouseover)="mve = i"
+			(mouseleave)="mve = null"
+			[@openClose]="i === mve"
+			(@openClose.done)="print($event)"
 		>
-			<li *ngFor="let photo of getPhotos()" class="photo-record">
-				<img *ngIf="photo.src" [src]="photo.src" />
-				<span *ngIf="!photo.src">{{ photo.title }}</span>
-			</li>
-		</section>
-	</div>
-</ion-content>
+			<img *ngIf="photo.src" [src]="photo.src" />
+		</li>
+	</section>
+</div>
+
+<button (click)="popItem()">btn</button>
+ -->
+
+<div *leftNav>TO USE WITH THE DIRECTIVE</div>
+
+<wizard>
+	<step-one wizardStep></step-one>
+	<step-two wizardStep></step-two>
+	<step-one wizardStep></step-one>
+</wizard>

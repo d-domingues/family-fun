@@ -72,16 +72,16 @@
     "use-lifecycle-interface": false,
     "use-pipe-transform-interface": true,
     "one-variable-per-declaration": false,
-    "component-class-suffix": [true, "Page", "Component"],
-    "directive-class-suffix": true,
+    //  "component-class-suffix": [true, "Page", "Component"],
+    // "directive-class-suffix": true,
     "directive-selector": [
-      true,
+      false,
       "attribute",
       "app",
       "camelCase"
     ],
     "component-selector": [
-      true,
+      false,
       "element",
       "app",
       "page",

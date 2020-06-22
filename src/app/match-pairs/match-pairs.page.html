@@ -7,11 +7,13 @@
 </ion-header>
 
 <ion-content>
-	<ion-grid no-padding>
+	<ion-grid>
 		<ion-row>
 			<ion-col size="6" *ngFor="let figure of figures">
+				<!-- <div class="rect"></div> -->
+				<img class="rect" [src]="figure.src" />
 				<!-- <app-flipping-fig [figure]="figure.src"></app-flipping-fig> -->
-				<div class="fig-wraper" [style.background-image]="'url(' + figure.src + ')'"></div>
+<!-- 				<div class="rect" [style.background-image]="'url(' + figure.src + ')'"></div> -->
 			</ion-col>
 		</ion-row>
 	</ion-grid>
