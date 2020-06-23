@@ -22,6 +22,8 @@ export class WhoIsPage {
 		this.figures = this.figService.getShuffledFigures()
 		this.currentIdx = 0
 		this.setOptions()
+			
+		todo: add , height=device-height to viewport at indext.html (test)
 	}
 
 	select(opt: Figure) {
